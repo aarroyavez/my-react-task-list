@@ -1,12 +1,9 @@
-
+import Header from "./components/Header"
 
 function App() {
-  
-
   return (
-    <p>hello</p>
+    <Header />
     )
   }
-
-
+  
 export default App
