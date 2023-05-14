@@ -1,5 +1,5 @@
 import styles from "./Header.module.css";
-import { AiOutlinePlusSquare} from "react-icons/ai"; 
+import { BsPlus} from "react-icons/bs"; 
 import todoapp from "../assets/todoapp.jpg";
 function Header(){
     return (
@@ -10,7 +10,7 @@ function Header(){
         <input placeholder="Agregar una nueva tarea" type="text" />
         <button>
             
-            <AiOutlinePlusSquare size={25} />
+            <BsPlus size={25} />
             </button>
     </form>
 
@@ -19,3 +19,4 @@ function Header(){
 }
 
 export default Header;
+
