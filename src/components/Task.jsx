@@ -1,11 +1,12 @@
 import styles from "./Task.module.css";
-import {VscTrash} from "react-icons/Vsc";
+import {VscTrash, VscPassFilled} from "react-icons/Vsc";
 
-function Task({task}) {
+
+function Task({task, onComplete}) {
     return (
         <div className={styles.task}>
-            <button className={styles.checkContainer}>
-            <div />
+            <button className={styles.checkContainer} onClick={() => onComplete(task.id)}>
+                {task.isCompleted ? <VscPassFilled /> : <div />}
             </button>
 
             <p>{task.title}</p>
