@@ -1,15 +1,16 @@
 import styles from "./Task.module.css";
-import {VscTrash} from "react-icons/Vsc";
-function Task() {
+import {VscTrash, VscPassFilled} from "react-icons/Vsc";
+
+function Task({task, onComplete, onDelete}) {
     return (
         <div className={styles.task}>
-            <button className={styles.checkContainer}>
-            <div />
+            <button className={styles.checkContainer} onClick={() => onComplete(task.id)}>
+                {task.isCompleted ? <VscPassFilled /> : <div />}
             </button>
 
-            <p>Ponerme al día con las clases de ADA School</p>
+            <p className={task.isCompleted ? styles.textCompleted : ""}>{task.title}</p>
             
-            <button className={styles.deleteButton}>
+            <button className={styles.deleteButton} onClick={() => onDelete(task.id)}>
                 <VscTrash size={20} />
             </button>
         </div>
