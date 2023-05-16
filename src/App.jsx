@@ -2,6 +2,8 @@ import Header from "./components/Header"
 import TaskList from "./components/TaskList"
 import { useState } from "react";
 
+const localStorageKey = "todo:savedTaskList";
+
 function App() {
   const [taskList, setTaskList] = useState([]);
 
@@ -13,6 +15,11 @@ function App() {
         isCompleted: false
       }
     ]);
+  }
+
+  function setTaskListSave(newTaskList) {
+    setTaskList(newTaskList);
+    localStorage.setItem(localStorageKey, JSON.stringify(newTaskList));
   }
 
   function deleteTaskById(taskId) {
