@@ -1,65 +1,20 @@
-import Header from "./components/Header"
-import TaskList from "./components/TaskList"
-import { useEffect, useState } from "react";
-
-const localStorageKey = "todo:savedTaskList";
+import Header from "./components/Header";
+import TaskList from "./components/TaskList";
+import useTaskList from "./components/CustomHook";
 
 function App() {
-  const [taskList, setTaskList] = useState([]);
+  const { taskList, addTask, deleteTask, updateTask } = useTaskList();
 
-  function loadSavedTaskList() {
-    const saved = localStorage.getItem(localStorageKey);
-    if(saved) {
-      setTaskList(JSON.parse(saved)); 
-    }
-  }
-
-  useEffect (() => {
-    loadSavedTaskList();
-  }, [])
-
-  function setTaskListSave(newTaskList) {
-    setTaskList(newTaskList);
-    localStorage.setItem(localStorageKey, JSON.stringify(newTaskList));
-  }
-
-  function addTask(taskTitle){
-    setTaskListSave([...taskList,
-      {
-        id: crypto.randomUUID(),
-        title: taskTitle,
-        isCompleted: false
-      }
-    ]);
-  }
-  function deleteTaskById(taskId) {
-    const newTaskList = taskList.filter(task => task.id != taskId);
-    setTaskListSave(newTaskList);
-  }
-
-  function toggleTaskCompleteById(taskId) {
-    const newTaskList = taskList.map(task => {
-      if(task.id === taskId) {
-        return {
-          ...task, 
-          isCompleted: !task.isCompleted
-        }
-      }
-
-      return task;
-    });
-    setTaskListSave(newTaskList);
-  }
   return (
     <>
       <Header onAddTask={addTask} />
       <TaskList
-      onDelete={deleteTaskById} 
-      taskList={taskList} 
-      onComplete={toggleTaskCompleteById}
-        />
+        taskList={taskList}
+        onComplete={(taskId) => updateTask(taskId, { isCompleted: true })}
+        onDelete={deleteTask}
+      />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
