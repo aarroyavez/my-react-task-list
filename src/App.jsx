@@ -15,6 +15,11 @@ function App() {
     ]);
   }
 
+  function deleteTaskById(taskId) {
+    const newTaskList = taskList.filter(task => task.id != taskId);
+    setTaskList(newTaskList);
+  }
+
   function toggleTaskCompleteById(taskId) {
     const newTaskList = taskList.map(task => {
       if(task.id === taskId) {
@@ -31,7 +36,8 @@ function App() {
   return (
     <>
       <Header onAddTask={addTask} />
-      <TaskList 
+      <TaskList
+      onDelete={deleteTaskById} 
       taskList={taskList} 
       onComplete={toggleTaskCompleteById}
         />

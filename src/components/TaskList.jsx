@@ -1,7 +1,7 @@
 import Task from "./Task";
 import styles from "./TaskList.module.css";
 
-function TaskList({taskList, onComplete}) {
+function TaskList({taskList, onComplete, onDelete}) {
     const taskListQantity = taskList.length;
     const completedTaskList = taskList.filter(task => task.isCompleted).length;
 
@@ -21,7 +21,7 @@ function TaskList({taskList, onComplete}) {
 
             <div className={styles.list}>
                 {taskList.map(task => (
-                    <Task key={task.id} task={task} onComplete={onComplete} />
+                    <Task key={task.id} task={task} onComplete={onComplete} onDelete={onDelete} />
                 ))}
             </div>
         </section>
