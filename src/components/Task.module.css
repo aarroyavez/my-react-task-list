@@ -13,8 +13,13 @@
   .task p {
     font-size: 14px;
     line-height: 19px;
-    color: #F2F2F2;
+    color: orangered;
     margin-right: auto;
+  }
+
+  p.taskDescription {
+    font-size: 10px;
+    color: white;
   }
   
   p.textCompleted {
@@ -47,3 +52,9 @@
     border: none;
     color: #808080;
   }
+
+  
+  
+
+ 
+  

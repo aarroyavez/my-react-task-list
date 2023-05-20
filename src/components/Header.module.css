@@ -51,12 +51,10 @@
   height: 40%;
   width: 87%;
   flex: 1;
-  color: 1px;
+  color: black;
   border: 1.5px solid orangered;
   border-radius: 8px;
   padding: 0 16px;
   font-size: 14px;
-  
-  
 }
 

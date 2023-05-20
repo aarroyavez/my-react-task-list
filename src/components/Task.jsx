@@ -8,8 +8,11 @@ function Task({task, onComplete, onDelete}) {
                 {task.isCompleted ? <VscPassFilled /> : <div />}
             </button>
 
-            <p className={task.isCompleted ? styles.textCompleted : ""}>{task.title}</p>
+        <div>
             
+            <p className={`${styles.taskTitle} ${task.isCompleted ? styles.textCompleted : ""}`}>{task.title}</p>
+            <p className={`${styles.taskDescription} ${task.isCompleted ? styles.textCompleted: ""}`}>{task.description}</p>
+        </div>
             <button className={styles.deleteButton} onClick={() => onDelete(task.id)}>
                 <VscTrash size={20} />
             </button>

@@ -14,6 +14,12 @@ function Header({onAddTask}){
         setDescription("");
     }
 
+    function onKeyDown(event) {
+        if (event.key === "Enter"){
+            handleSubmit(event);
+        }
+    }
+
     function onChangeTitle(event) {
         setTitle(event.target.value);
     }
@@ -40,6 +46,7 @@ function Header({onAddTask}){
             type="text"
             value={description}
             onChange={onChangeDescription}
+            onKeyDown={onKeyDown}
         />
         
         <button>
