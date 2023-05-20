@@ -5,16 +5,21 @@ import { useState } from "react";
 
 function Header({onAddTask}){
     const [title, setTitle] = useState("");
+    const [description, setDescription] = useState("");
 
     function handleSubmit (event){
         event.preventDefault();
-
-        onAddTask(title)
+        onAddTask(title, description);
         setTitle("");
+        setDescription("");
     }
 
     function onChangeTitle(event) {
         setTitle(event.target.value);
+    }
+
+    function onChangeDescription(event) {
+        setDescription(event.target.value);
     }
 
     return (
@@ -22,13 +27,26 @@ function Header({onAddTask}){
         <img src={todoapp} width={160} />
     
     <form onSubmit={handleSubmit} className={styles.newTaskForm}>
-        <input placeholder="Agregar una nueva tarea" type="text" value={title} onChange={onChangeTitle} />
-        <button>
-            
-            <BsPlus size={25} />
-            </button>
-    </form>
+        <input 
+            placeholder="Agregar una nueva tarea" 
+            type="text" 
+            value={title} 
+            onChange={onChangeTitle} 
+        />
 
+        <textarea
+            className={styles.newTaskForm}
+            placeholder="Agregar una descripción de tarea"
+            type="text"
+            value={description}
+            onChange={onChangeDescription}
+        />
+        
+        <button>
+            <BsPlus size={25} 
+            />
+        </button>
+    </form>
     </header>
     )
 }
