@@ -52,8 +52,14 @@ function Header({onAddTask}){
             type="text" 
             value={title} 
             onChange={onChangeTitle} 
-        />
-
+            />
+            {formValidation.error ? (
+            <span 
+            className={styles.error}
+            >
+            {formValidation.errorMessage}
+            </span>
+            ): null}
         <textarea
             className={styles.newTaskForm}
             placeholder="Agregar una descripción de tarea"
@@ -62,12 +68,7 @@ function Header({onAddTask}){
             onChange={onChangeDescription}
             onKeyDown={onKeyDown}
         />
-
-        {formValidation.error ? (
-            <span className={styles.error}>{formValidation.errorMessage}</span>
-        ): null}
         {/* {error && <p className={styles.error}>{error}</p>} */}
-        
         <button>
             <BsPlus size={25} 
             />
