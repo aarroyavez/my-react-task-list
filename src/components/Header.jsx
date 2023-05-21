@@ -6,13 +6,27 @@ import { useState } from "react";
 function Header({onAddTask}){
     const [title, setTitle] = useState("");
     const [description, setDescription] = useState("");
+    const [formValidation, setFormValidation]=useState({error: false, errorMessage:""});
+    // const [error, setError] = useState("");
 
     function handleSubmit (event){
         event.preventDefault();
+
+        const error = title.length < 3;
+        setFormValidation({error: error, errorMessage: error ? "La tarea debe contener por lo menos tres(3) caracteres":""});
+
+        // if (title.length < 3) {
+        //     setError("La tarea debe contener por lo menos tres(3) caracteres");
+        //     return;
+        // }
+
+        if (!error) {        
         onAddTask(title, description);
         setTitle("");
         setDescription("");
-    }
+        }
+        // setError;
+    };
 
     function onKeyDown(event) {
         if (event.key === "Enter"){
@@ -48,6 +62,11 @@ function Header({onAddTask}){
             onChange={onChangeDescription}
             onKeyDown={onKeyDown}
         />
+
+        {formValidation.error ? (
+            <span className={styles.error}>{formValidation.errorMessage}</span>
+        ): null}
+        {/* {error && <p className={styles.error}>{error}</p>} */}
         
         <button>
             <BsPlus size={25} 
