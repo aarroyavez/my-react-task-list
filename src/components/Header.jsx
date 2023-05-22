@@ -47,7 +47,8 @@ function Header({onAddTask}){
         <img src={todoapp} width={160} />
     
     <form onSubmit={handleSubmit} className={styles.newTaskForm}>
-        <input 
+        <input
+            className={styles.inputTitle} 
             placeholder="Agregar una nueva tarea" 
             type="text" 
             value={title} 
@@ -60,8 +61,8 @@ function Header({onAddTask}){
             {formValidation.errorMessage}
             </span>
             ): null}
-        <textarea
-            className={styles.newTaskForm}
+        <input
+            className={styles.inputDescription}
             placeholder="Agregar una descripción de tarea"
             type="text"
             value={description}
