@@ -7,8 +7,8 @@ function Header({onAddTask}){
     const [title, setTitle] = useState("");
     const [description, setDescription] = useState("");
     const [formValidation, setFormValidation]=useState({error: false, errorMessage:""});
-    
-    function handleSubmit (event){
+
+    const handleSubmit = (event) => {
         event.preventDefault();
 
         const error = title.length < 3;
@@ -70,6 +70,7 @@ function Header({onAddTask}){
             />
         </button>
     </form>
+    
     </header>
     )
 }
