@@ -7,25 +7,17 @@ function Header({onAddTask}){
     const [title, setTitle] = useState("");
     const [description, setDescription] = useState("");
     const [formValidation, setFormValidation]=useState({error: false, errorMessage:""});
-    // const [error, setError] = useState("");
-
+    
     function handleSubmit (event){
         event.preventDefault();
 
         const error = title.length < 3;
         setFormValidation({error: error, errorMessage: error ? "La tarea debe contener por lo menos tres(3) caracteres":""});
-
-        // if (title.length < 3) {
-        //     setError("La tarea debe contener por lo menos tres(3) caracteres");
-        //     return;
-        // }
-
         if (!error) {        
         onAddTask(title, description);
         setTitle("");
         setDescription("");
         }
-        // setError;
     };
 
     function onKeyDown(event) {
@@ -34,12 +26,20 @@ function Header({onAddTask}){
         }
     }
 
-    function onChangeTitle(event) {
-        setTitle(event.target.value);
-    }
+    const onChangeTitle = (event)=> {
+        const value = event.target.value;
+    
+        setFormValidation({
+          ...formValidation, 
+          email: value.length == 0 ? "email is required": ""
+        })
+    
+        setTitle(value);
+      };
 
-    function onChangeDescription(event) {
-        setDescription(event.target.value);
+    const onChangeDescription=(event) => {
+        const value = event.target.value;
+        setDescription(value);
     }
 
     return (
@@ -53,14 +53,7 @@ function Header({onAddTask}){
             type="text" 
             value={title} 
             onChange={onChangeTitle} 
-            />
-            {formValidation.error ? (
-            <span 
-            className={styles.error}
-            >
-            {formValidation.errorMessage}
-            </span>
-            ): null}
+        />
         <input
             className={styles.inputDescription}
             placeholder="Agregar una descripción de tarea"
@@ -69,7 +62,9 @@ function Header({onAddTask}){
             onChange={onChangeDescription}
             onKeyDown={onKeyDown}
         />
-        {/* {error && <p className={styles.error}>{error}</p>} */}
+        {formValidation.error ? (
+            <span className={styles.error}>{formValidation.errorMessage}</span>
+        ): null}
         <button>
             <BsPlus size={25} 
             />
