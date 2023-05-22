@@ -28,12 +28,6 @@ function Header({onAddTask}){
 
     const onChangeTitle = (event)=> {
         const value = event.target.value;
-    
-        setFormValidation({
-          ...formValidation, 
-          email: value.length == 0 ? "email is required": ""
-        })
-    
         setTitle(value);
       };
 
