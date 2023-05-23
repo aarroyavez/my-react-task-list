@@ -12,7 +12,7 @@ function Header({onAddTask}){
         event.preventDefault();
 
         const error = title.length < 3;
-        setFormValidation({error: error, errorMessage: error ? "La tarea debe contener por lo menos tres(3) caracteres":""});
+        setFormValidation({error: error, errorMessage: error ? "❗La tarea debe contener por lo menos tres(3) caracteres":""});
         if (!error) {        
         onAddTask(title, description);
         setTitle("");
