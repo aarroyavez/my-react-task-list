@@ -1,14 +1,14 @@
-import Header from "./components/Header"
-import TaskList from "./components/TaskList"
+import Header from "./components/Header";
+import TaskList from "./components/TaskList";
 import useTaskList from "./components/useTaskList";
 
 function App() {
-  const { taskList, addTask, deleteTaskById, toggleTaskCompleteById } =
+  const { taskList, addTask, deleteTaskById, toggleTaskCompleteById, deleteAllTasks } =
     useTaskList();
 
   return (
     <>
-      <Header onAddTask={addTask} />
+      <Header onAddTask={addTask} onDeleteAllTasks={deleteAllTasks}/>
       <TaskList
         onDelete={deleteTaskById}
         taskList={taskList}
