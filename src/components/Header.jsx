@@ -1,23 +1,30 @@
 import styles from "./Header.module.css";
-import { BsPlus} from "react-icons/bs"; 
+import { BsPlusCircle} from "react-icons/bs"; 
 import todoapp from "../assets/todoapp.jpg";
 import { useState } from "react";
+import { BsTrashFill } from "react-icons/bs";
 
-function Header({onAddTask}){
+function Header({onAddTask, onDeleteAllTasks}){
     const [title, setTitle] = useState("");
     const [description, setDescription] = useState("");
-    const [formValidation, setFormValidation]=useState({error: false, errorMessage:""});
+    const [formValidation, setFormValidation]=useState({
+        error: false, 
+        errorMessage:""});
 
     const handleSubmit = (event) => {
         event.preventDefault();
 
         const error = title.length < 3;
-        setFormValidation({error: error, errorMessage: error ? "❌La tarea debe tener mínimo 3 caracteres":""});
+        setFormValidation({error: error, errorMessage: error ? "❌The task must have a minimum of 3 characters❗":""});
         if (!error) {        
         onAddTask(title, description);
         setTitle("");
         setDescription("");
         }
+    };
+
+    const handleDeleteAllTasks = () => {
+        onDeleteAllTasks();
     };
 
     function onKeyDown(event) {
@@ -38,31 +45,34 @@ function Header({onAddTask}){
 
     return (
      <header className={styles.header}>
-        <img src={todoapp} width={160} />
+        <img src={todoapp} width={160}/>
     
     <form onSubmit={handleSubmit} className={styles.newTaskForm}>
         <input
             className={styles.inputTitle} 
-            placeholder="Agregar una nueva tarea" 
+            placeholder="Add task" 
             type="text" 
             value={title} 
             onChange={onChangeTitle} 
         />
-        {formValidation.error ? (
-            <span className={styles.error}>{formValidation.errorMessage}</span>
-        ): null}
         <input
             className={styles.inputDescription}
-            placeholder="Agregar una descripción de tarea"
+            placeholder="Add description"
             type="text"
             value={description}
             onChange={onChangeDescription}
             onKeyDown={onKeyDown}
         />
-        
-        <button>
-            <BsPlus size={25} 
+        {formValidation.error ? (
+            <span className={styles.error}>{formValidation.errorMessage}</span>
+        ): null}
+        <button type="submit" className={styles.addButton}>CREATE
+            <BsPlusCircle size={20} 
             />
+        </button>
+        <button className={styles.deleteAllTasks} type="button" onClick={handleDeleteAllTasks}>
+            DELETE ALL
+            <BsTrashFill size={20}/>
         </button>
     </form>
     

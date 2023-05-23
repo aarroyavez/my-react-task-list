@@ -51,7 +51,12 @@ function useTaskList() {
     setTaskListSave(newTaskList);
   }
 
-  return { taskList, addTask, deleteTaskById, toggleTaskCompleteById };
+  function deleteAllTasks () {
+    setTaskList([]);
+    localStorage.removeItem(localStorageKey);
+  }
+
+  return { taskList, addTask, deleteTaskById, toggleTaskCompleteById, deleteAllTasks };
 }
 
 export default useTaskList;
