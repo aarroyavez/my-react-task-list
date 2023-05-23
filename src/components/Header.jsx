@@ -7,25 +7,17 @@ function Header({onAddTask}){
     const [title, setTitle] = useState("");
     const [description, setDescription] = useState("");
     const [formValidation, setFormValidation]=useState({error: false, errorMessage:""});
-    // const [error, setError] = useState("");
 
-    function handleSubmit (event){
+    const handleSubmit = (event) => {
         event.preventDefault();
 
         const error = title.length < 3;
         setFormValidation({error: error, errorMessage: error ? "La tarea debe contener por lo menos tres(3) caracteres":""});
-
-        // if (title.length < 3) {
-        //     setError("La tarea debe contener por lo menos tres(3) caracteres");
-        //     return;
-        // }
-
         if (!error) {        
         onAddTask(title, description);
         setTitle("");
         setDescription("");
         }
-        // setError;
     };
 
     function onKeyDown(event) {
@@ -34,12 +26,14 @@ function Header({onAddTask}){
         }
     }
 
-    function onChangeTitle(event) {
-        setTitle(event.target.value);
-    }
+    const onChangeTitle = (event)=> {
+        const value = event.target.value;
+        setTitle(value);
+      };
 
-    function onChangeDescription(event) {
-        setDescription(event.target.value);
+    const onChangeDescription=(event) => {
+        const value = event.target.value;
+        setDescription(value);
     }
 
     return (
@@ -47,14 +41,13 @@ function Header({onAddTask}){
         <img src={todoapp} width={160} />
     
     <form onSubmit={handleSubmit} className={styles.newTaskForm}>
-        <input 
-            className={styles.inputTitle}
+        <input
+            className={styles.inputTitle} 
             placeholder="Agregar una nueva tarea" 
             type="text" 
             value={title} 
             onChange={onChangeTitle} 
         />
-
         <input
             className={styles.inputDescription}
             placeholder="Agregar una descripción de tarea"
@@ -63,22 +56,17 @@ function Header({onAddTask}){
             onChange={onChangeDescription}
             onKeyDown={onKeyDown}
         />
-
         {formValidation.error ? (
             <span className={styles.error}>{formValidation.errorMessage}</span>
         ): null}
-        {/* {error && <p className={styles.error}>{error}</p>} */}
-        
         <button>
             <BsPlus size={25} 
             />
         </button>
     </form>
+    
     </header>
     )
 }
 
 export default Header;
-
-
-
