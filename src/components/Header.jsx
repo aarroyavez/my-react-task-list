@@ -12,7 +12,7 @@ function Header({onAddTask}){
         event.preventDefault();
 
         const error = title.length < 3;
-        setFormValidation({error: error, errorMessage: error ? "La tarea debe contener por lo menos tres(3) caracteres":""});
+        setFormValidation({error: error, errorMessage: error ? "❌La tarea debe tener mínimo 3 caracteres":""});
         if (!error) {        
         onAddTask(title, description);
         setTitle("");
@@ -48,6 +48,9 @@ function Header({onAddTask}){
             value={title} 
             onChange={onChangeTitle} 
         />
+        {formValidation.error ? (
+            <span className={styles.error}>{formValidation.errorMessage}</span>
+        ): null}
         <input
             className={styles.inputDescription}
             placeholder="Agregar una descripción de tarea"
@@ -56,9 +59,7 @@ function Header({onAddTask}){
             onChange={onChangeDescription}
             onKeyDown={onKeyDown}
         />
-        {formValidation.error ? (
-            <span className={styles.error}>{formValidation.errorMessage}</span>
-        ): null}
+        
         <button>
             <BsPlus size={25} 
             />

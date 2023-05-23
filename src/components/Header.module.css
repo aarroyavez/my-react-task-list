@@ -61,16 +61,8 @@
   font-size: 14px;
 }
 
-/* .error {
-position: relative;
-height: 70%;
-width: 40%;
-border: 2px solid ;
-border-radius: 8px;
-padding: 0 16px;
-background: white;
-color: orangered;
-margin-top: 4px;
-font-size: 12px;
+.error {
+  color: white;
+  font-size: 14px;
 }
-     */
+    
