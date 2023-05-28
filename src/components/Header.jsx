@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styles from "./Header.module.css";
 import { BsPlusCircle } from "react-icons/bs";
-import todoapp from "../assets/todoapp.jpg";
+import taskListIcon from "../assets/taskListIcon.jpg";
 import { BsTrashFill } from "react-icons/bs";
 
 function Header({ onAddTask, onDeleteAllTasks }) {
@@ -18,7 +18,7 @@ function Header({ onAddTask, onDeleteAllTasks }) {
     const error = title.length < 3 || title.trim() === "";
     setFormValidation({
       error: error,
-      errorMessage: error ? "❌The task must have a minimum of 3 characters❗" : "",
+      errorMessage: error ? "❌alert: The task must have a minimum of 3 characters❗" : "",
     });
 
     if (!error) {
@@ -44,8 +44,8 @@ function Header({ onAddTask, onDeleteAllTasks }) {
 
   return (
     <header className={styles.header}>
-      <h1 className={styles.todoApp}>My task list</h1>
-      <img src={todoapp} alt="Todo App" width={160} />
+      <h1 className={styles.todoApp}>My Task List</h1>
+      <img src={taskListIcon} alt="Todo App" width={160} />
 
       <form onSubmit={handleSubmit} className={styles.newTaskForm}>
         <input

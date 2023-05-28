@@ -22,17 +22,19 @@
   height: 70%;
   width: 87%;
   flex: 1;
-  color: black;
-  border: 1.5px solid orangered;
+  color: white;
+  border: 1.5px solid black;
   max-width: 736px;
   border-radius: 8px;
   padding: 0 16px;
   font-size: 14px;
+  background: #333333;
 }
 
 .inputDescription {
   position: absolute;
-  border: 1px solid orangered;
+  border: 1px solid black;
+  color: white;
   border-radius: 8px;
   bottom: -25px;
   width: 64.5%;
@@ -42,10 +44,11 @@
   padding: 1rem;
   height: 20%;
   font-size: 14px;
+  background: #333333;
 }
 
 .newTaskForm input::placeholder {
-  color: black;
+  color: white;
 }
 
 .addButton {
@@ -65,19 +68,21 @@
 .error {
   position: absolute;
   bottom: -50px;
-  color: white;
+  color: yellow;
   font-size: 14px;
   background: none;
+  text-transform: uppercase;
+  text-decoration: solid;
 }
 
 .inputError {
-  border: 3px solid orangered !important;
+  border: 3px solid rgb(0, 170, 255) !important;
 }
 
 .deleteAllTasks {
   height: 70%;
   padding: 0 10px;
-  background: orangered;
+  background: red;
   color: white;
   border: none;
   border-radius: 8px;
@@ -92,7 +97,9 @@
   display: flex;
   position: absolute;
   flex-direction: column;
-  color: rgb(0, 170, 255);
+  background: linear-gradient(to right, rgb(0, 170, 255), #ff00ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   bottom: 220px;
   gap: 10px;
 }
