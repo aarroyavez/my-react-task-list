@@ -63,15 +63,18 @@
 }
 
 .error {
-position: relative;
-border: none ;
-border-radius: 8px;
-color: white;
-margin-top: 10px;
-font-size: 12px;
+  position: absolute;
+  bottom: -50px;
+  color: white;
+  font-size: 14px;
+  background: none;
 }
 
-.deleteAllTasks{
+.inputError {
+  border: 3px solid red !important;
+}
+
+.deleteAllTasks {
   height: 70%;
   padding: 0 10px;
   background: rgb(0, 170, 255);
@@ -83,4 +86,13 @@ font-size: 12px;
   gap: 6px;
   font-weight: 700;
   font-size: 14px;
+}
+
+.todoApp {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  color: rgb(0, 170, 255);
+  bottom: 220px;
+  gap: 10px;
 }
