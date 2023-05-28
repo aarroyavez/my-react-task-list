@@ -51,12 +51,32 @@ function useTaskList() {
     setTaskListSave(newTaskList);
   }
 
-  function deleteAllTasks () {
+  function updateTaskTitleById(taskId, updatedTitle) {
+    const newTaskList = taskList.map((task) => {
+      if (task.id === taskId) {
+        return {
+          ...task,
+          title: updatedTitle,
+        };
+      }
+      return task;
+    });
+    setTaskListSave(newTaskList);
+  }
+
+  function deleteAllTasks() {
     setTaskList([]);
     localStorage.removeItem(localStorageKey);
   }
 
-  return { taskList, addTask, deleteTaskById, toggleTaskCompleteById, deleteAllTasks };
+  return {
+    taskList,
+    addTask,
+    deleteTaskById,
+    toggleTaskCompleteById,
+    updateTaskTitleById,
+    deleteAllTasks,
+  };
 }
 
 export default useTaskList;

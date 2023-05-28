@@ -15,11 +15,13 @@
   line-height: 19px;
   color: orangered;
   margin-right: auto;
+  text-align: center;
 }
 
 p.taskDescription {
   font-size: 10px;
   color: white;
+  text-align: center;
 }
 
 p.textCompleted {
@@ -50,9 +52,42 @@ p.textCompleted {
 .deleteButton {
   background: none;
   border: none;
-  color: #808080;
+  color: rgb(0, 170, 255);
+  
 }
   
+.editButton{
+  background: none;
+  border: none;
+  color: rgb(0, 170, 255);
+  margin-left: 15px;
+}
 
- 
-  
+.cancelButton{
+  background: none;
+  border: none;
+  color: orangered;
+}
+
+.saveButton{
+  background: none;
+  border: none;
+  color: orangered;
+  margin-left: 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.editInput {
+  height: 25px;
+  font-size: 14px;
+  border: 2px solid orangered !important;
+  border-radius: 4px;
+  justify-content: center;
+  text-align: center;
+}
+
+.disabledButton {
+  color: #808080;
+}
+

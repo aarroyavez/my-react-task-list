@@ -51,7 +51,7 @@
 .addButton {
   height: 70%;
   padding: 0 10px;
-  background: orangered;
+  background: rgb(0, 170, 255);
   color: #fff;
   border: none;
   border-radius: 8px;
@@ -71,13 +71,13 @@
 }
 
 .inputError {
-  border: 3px solid red !important;
+  border: 3px solid orangered !important;
 }
 
 .deleteAllTasks {
   height: 70%;
   padding: 0 10px;
-  background: rgb(0, 170, 255);
+  background: orangered;
   color: white;
   border: none;
   border-radius: 8px;
