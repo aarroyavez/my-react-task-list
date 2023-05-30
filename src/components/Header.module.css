@@ -45,6 +45,7 @@
   height: 20%;
   font-size: 14px;
   background: #333333;
+  /* width: 44.5%; */
 }
 
 .newTaskForm input::placeholder {
@@ -102,4 +103,18 @@
   -webkit-text-fill-color: transparent;
   bottom: 220px;
   gap: 10px;
+}
+
+.completeAllTasks{
+  height: 70%;
+  padding: 0 10px;
+  background: #ff00ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 700;
+  font-size: 14px;
 }

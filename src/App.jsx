@@ -10,7 +10,8 @@ function App() {
     deleteTaskById,
     toggleTaskCompleteById,
     deleteAllTasks,
-    updateTaskTitleById, // Nueva función para actualizar el título de la tarea
+    completeAllTasks,
+    updateTaskTitleById,
   } = useTaskList();
 
   const handleUpdateTask = (taskId, updatedTitle) => {
@@ -19,7 +20,11 @@ function App() {
 
   return (
     <>
-      <Header onAddTask={addTask} onDeleteAllTasks={deleteAllTasks} />
+      <Header
+        onAddTask={addTask}
+        onDeleteAllTasks={deleteAllTasks}
+        onCompleteAll={completeAllTasks} // Actualizado el nombre de la prop
+      />
       <TaskList
         taskList={taskList}
         onComplete={toggleTaskCompleteById}

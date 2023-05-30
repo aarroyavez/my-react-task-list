@@ -4,7 +4,7 @@ const localStorageKey = "todo:savedTaskList";
 
 function useTaskList() {
   const [taskList, setTaskList] = useState([]);
-
+  
   function loadSavedTaskList() {
     const saved = localStorage.getItem(localStorageKey);
     if (saved) {
@@ -64,6 +64,17 @@ function useTaskList() {
     setTaskListSave(newTaskList);
   }
 
+  function completeAllTasks() {
+    const allTasksCompleted = taskList.every((task) => task.isCompleted);
+
+    const newTaskList = taskList.map((task) => ({
+      ...task,
+      isCompleted: !allTasksCompleted,
+    }));
+
+    setTaskListSave(newTaskList);
+  }
+
   function deleteAllTasks() {
     setTaskList([]);
     localStorage.removeItem(localStorageKey);
@@ -76,7 +87,9 @@ function useTaskList() {
     toggleTaskCompleteById,
     updateTaskTitleById,
     deleteAllTasks,
+    completeAllTasks,
   };
 }
 
 export default useTaskList;
+

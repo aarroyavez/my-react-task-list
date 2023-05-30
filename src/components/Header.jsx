@@ -3,8 +3,9 @@ import styles from "./Header.module.css";
 import { BsPlusCircle } from "react-icons/bs";
 import taskListIcon from "../assets/taskListIcon.jpg";
 import { BsTrashFill } from "react-icons/bs";
+import {VscChecklist} from "react-icons/vsc"
 
-function Header({ onAddTask, onDeleteAllTasks }) {
+function Header({ onAddTask, onDeleteAllTasks, onCompleteAll }) {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [formValidation, setFormValidation] = useState({
@@ -27,6 +28,11 @@ function Header({ onAddTask, onDeleteAllTasks }) {
       setDescription("");
     }
   };
+
+  const handleCompleteAllTasks = () => {
+    onCompleteAll();
+  };
+
 
   const handleDeleteAllTasks = () => {
     onDeleteAllTasks();
@@ -78,6 +84,14 @@ function Header({ onAddTask, onDeleteAllTasks }) {
         >
           DELETE ALL
           <BsTrashFill size={20} />
+        </button>
+        <button
+          className={styles.completeAllTasks}
+          type="button"
+          onClick={handleCompleteAllTasks}
+        >
+          COMPLETE ALL
+          <VscChecklist size={20} />
         </button>
       </form>
     </header>
