@@ -1,31 +1,47 @@
+import React from "react";
 import Task from "./Task";
 import styles from "./TaskList.module.css";
 
-function TaskList({taskList, onComplete, onDelete}) {
-    const taskListQantity = taskList.length;
-    const completedTaskList = taskList.filter(task => task.isCompleted).length;
+function TaskList({ taskList, onComplete, onDelete, onUpdateTask }) {
+  const taskListQuantity = taskList.length;
+  const completedTaskList = taskList.filter((task) => task.isCompleted).length;
 
-    return (
-        <section className={styles.taskList}>
-            <header className={styles.header}>
-                <div>
-                    <p>Crear tarea</p>
-                    <span>{taskListQantity}</span>
-                </div>
+  const handleTaskUpdate = (taskId, updatedTitle) => {
+    onUpdateTask(taskId, updatedTitle);
+  };
 
-                <div>
-                    <p className={styles.textColor}>Tareas Completas</p>
-                    <span>{completedTaskList} of {taskListQantity}</span>
-                </div>
-            </header>
+  return (
+    <section className={styles.taskList}>
+      <header className={styles.header}>
+        <div>
+          <p>Created Tasks</p>
+          <span>{taskListQuantity}</span>
+        </div>
 
-            <div className={styles.list}>
-                {taskList.map(task => (
-                    <Task key={task.id} task={task} onComplete={onComplete} onDelete={onDelete} />
-                ))}
-            </div>
-        </section>
-    )
+        <div>
+          <p className={styles.textColor}>Complete Tasks</p>
+          <span>
+            {completedTaskList} of {taskListQuantity}
+          </span>
+        </div>
+      </header>
+
+      <div className={styles.list}>
+        {taskList.map((task) => (
+          <Task
+            key={task.id}
+            task={task}
+            onComplete={onComplete}
+            onDelete={onDelete}
+            onUpdateTask={handleTaskUpdate}
+          />
+        ))}
+      </div>
+    </section>
+  );
 }
 
 export default TaskList;
+
+
+

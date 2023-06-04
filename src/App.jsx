@@ -1,20 +1,19 @@
-import Header from "./components/Header"
-import TaskList from "./components/TaskList"
-import useTaskList from "./components/useTaskList";
+import { BrowserRouter, Route, Routes } from "react-router-dom"
+import AboutUs from "./pages/AboutUs";
+import Home from "./pages/Home";
+import Tasks from "./pages/Tasks";
+import Menu from "./Menu";
 
 function App() {
-  const { taskList, addTask, deleteTaskById, toggleTaskCompleteById } =
-    useTaskList();
-
   return (
-    <>
-      <Header onAddTask={addTask} />
-      <TaskList
-        onDelete={deleteTaskById}
-        taskList={taskList}
-        onComplete={toggleTaskCompleteById}
-      />
-    </>
+    <BrowserRouter>
+    <Menu />
+      <Routes>
+        <Route exact path="/" element={<Home />} />
+        <Route path="/tasks" element={<Tasks />} />
+        <Route path="/about" element={<AboutUs />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
