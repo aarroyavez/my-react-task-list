@@ -1,39 +1,20 @@
-import React from "react";
-import Header from "./components/Header";
-import TaskList from "./components/TaskList";
-import useTaskList from "./components/useTaskList";
+import { BrowserRouter, Route, Routes } from "react-router-dom"
+import AboutUs from "./pages/AboutUs";
+import Home from "./pages/Home";
+import Tasks from "./pages/Tasks";
+import Menu from "./Menu";
 
 function App() {
-  const {
-    taskList,
-    addTask,
-    deleteTaskById,
-    toggleTaskCompleteById,
-    deleteAllTasks,
-    completeAllTasks,
-    updateTaskTitleById,
-  } = useTaskList();
-
-  const handleUpdateTask = (taskId, updatedTitle) => {
-    updateTaskTitleById(taskId, updatedTitle);
-  };
-
   return (
-    <>
-      <Header
-        onAddTask={addTask}
-        onDeleteAllTasks={deleteAllTasks}
-        onCompleteAll={completeAllTasks} // Actualizado el nombre de la prop
-      />
-      <TaskList
-        taskList={taskList}
-        onComplete={toggleTaskCompleteById}
-        onDelete={deleteTaskById}
-        onUpdateTask={handleUpdateTask}
-      />
-    </>
+    <BrowserRouter>
+    <Menu />
+      <Routes>
+        <Route exact path="/" element={<Home />} />
+        <Route path="/tasks" element={<Tasks />} />
+        <Route path="/about" element={<AboutUs />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
 export default App;
-
