@@ -13,7 +13,7 @@ function AboutUs() {
           <h1 className={styles.title}>Acerca de Nosotros</h1>
           <p className={styles.about}>My Task List es una aplicación web y de escritorio que te ayuda a ordenar y manipular tus tareas o actividades diarias de una manera muy eficiente. Con ella, podrás agregar o crear, eliminar, editar o actualizar y completar tus tareas. La App entrega una interfaz demasiado intuitiva y amigable; fácil de usar y sencilla para administrar tus responsabilidades diarias.</p>
           <br></br>
-          <h3 className={styles.functions}><VscTasklist style={{color: "rgb(0, 170, 255)"}} />Funcionalidades<VscTasklist style={{color: "rgb(0, 170, 255)"}} /></h3>
+          <h2 className={styles.functions}><VscTasklist style={{color: "rgb(0, 170, 255)"}} />Funcionalidades<VscTasklist style={{color: "rgb(0, 170, 255)"}} /></h2>
           <br></br>
           <div className={styles.list}>
           <ul className={styles.ul}>
@@ -27,7 +27,7 @@ function AboutUs() {
           </ul>
           </div>
           <br></br>
-          <h3 className={styles.functions}><FaReact style={{color: "rgb(0, 170, 255)"}}/>Tecnologías<FaReact style={{color: "rgb(0, 170, 255)"}}/></h3>
+          <h2 className={styles.functions}><FaReact style={{color: "rgb(0, 170, 255)"}}/>Tecnologías<FaReact style={{color: "rgb(0, 170, 255)"}}/></h2>
           <br></br>
           <div className={styles.list}>
             <ul className={styles.ul}>

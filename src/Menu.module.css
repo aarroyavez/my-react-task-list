@@ -1,0 +1,30 @@
+.navBar{
+    position: fixed;
+    display: flex;
+    justify-content: flex-end;
+    /* margin-top: 10px; */
+    background: none;
+    z-index: 9999;
+    /* padding: 10px; */
+    /* right: 10px; */
+    background: #262525;
+    border: 1px solid #262525;
+    width: 100%;
+}
+
+.menuButton{
+    margin-right: 100px;
+    padding: 10px 8px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    display: flex;
+}
+
+.menuButton:hover{
+    background: #333333;
+    border-radius: 50px;
+    box-shadow: 0 1px 4px;
+}
+

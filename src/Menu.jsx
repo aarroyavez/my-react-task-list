@@ -1,25 +1,48 @@
-import { Link } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
+import styles from "./Menu.module.css"
 
-function Menu(){
-    return (
-    <nav>
-        <ul>
-            <li>
-                <Link to="/">Home</Link>
-            </li>
-        </ul>
-        <ul>
-            <li>
-                <Link to="/about">About Us</Link>
-            </li>
-        </ul>
-        <ul>
-            <li>
-                <Link to="/tasks">Tasks</Link>
-            </li>
-        </ul>
+function Menu() {
+  const navigate = useNavigate();
+
+  const handleHomeClick = () => {
+    navigate('/');
+  };
+
+  const handleAboutClick = () => {
+    navigate('/about');
+  };
+
+  const handleTasksClick = () => {
+    navigate('/tasks');
+  };
+
+  return (
+    <nav className={styles.navBar}>
+        <button 
+            className={styles.menuButton}
+            type="button"
+            onClick={handleHomeClick}
+        >
+            Home
+        </button>
+        <button 
+            type="button"
+            className={styles.menuButton}
+            onClick={handleAboutClick}
+        >
+            About Us
+        </button>
+        <button 
+            typeof="button"
+            className={styles.menuButton}
+            onClick={handleTasksClick}
+        >
+            Tasks
+        </button>
     </nav>
-    );
+  );
 }
 
 export default Menu;
+
+

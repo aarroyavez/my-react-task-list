@@ -1,10 +1,11 @@
 .header {
-  background: #0D0D0D;
+  /* background: #0D0D0D; */
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 280px;
+  height: 300px;
   position: relative;
+  padding-top: 60px;
 }
 
 .newTaskForm {
@@ -101,7 +102,7 @@
   background: linear-gradient(to right, rgb(0, 170, 255), #ff00ff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  bottom: 220px;
+  bottom: 180px;
   gap: 10px;
 }
 
