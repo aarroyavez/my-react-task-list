@@ -78,7 +78,8 @@
 }
 
 .inputError {
-  border: 3px solid rgb(0, 170, 255) !important;
+  border: 3px solid yellow !important;
+  color: yellow;
 }
 
 .deleteAllTasks {
@@ -104,6 +105,7 @@
   -webkit-text-fill-color: transparent;
   bottom: 180px;
   gap: 10px;
+  font-size: 40px;
 }
 
 .completeAllTasks{

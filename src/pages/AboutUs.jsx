@@ -7,10 +7,12 @@ import {VscTasklist} from "react-icons/vsc"
 function AboutUs() {
     return (
       <>
+      <div>
+
       <div className={styles.icon}>
         <img src={about} alt="AboutUs" width={160}/>
       </div>
-          <h1 className={styles.title}>Acerca de Nosotros</h1>
+          <div><h1 className={styles.title}>Acerca de Nosotros</h1></div>
           <p className={styles.about}>My Task List es una aplicación web y de escritorio que te ayuda a ordenar y manipular tus tareas o actividades diarias de una manera muy eficiente. Con ella, podrás agregar o crear, eliminar, editar o actualizar y completar tus tareas. La App entrega una interfaz demasiado intuitiva y amigable; fácil de usar y sencilla para administrar tus responsabilidades diarias.</p>
           <br></br>
           <h2 className={styles.functions}><VscTasklist style={{color: "rgb(0, 170, 255)"}} />Funcionalidades<VscTasklist style={{color: "rgb(0, 170, 255)"}} /></h2>
@@ -37,6 +39,7 @@ function AboutUs() {
               <li><FaReact color="#ff00ff"/><strong style={{color: "rgb(0, 170, 255)"}}>Almacenamiento Local o Local Storage</strong>: Los datos quedan almacenados en la memoria del navegador por medio de la API del Local Storage</li>
             </ul>
           </div>
+      </div>
       </>
     );
 }

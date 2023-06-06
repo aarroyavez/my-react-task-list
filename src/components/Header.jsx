@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styles from "./Header.module.css";
 import { BsPlusCircle } from "react-icons/bs";
-import taskListIcon from "../assets/taskListIcon.jpg";
+import taskListIcon from "../assets/taskListIcon.png";
 import { BsTrashFill } from "react-icons/bs";
 import {VscChecklist} from "react-icons/vsc"
 

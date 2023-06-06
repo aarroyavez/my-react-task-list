@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import styles from "./Menu.module.css"
+import styles from "./styles/Menu.module.css"
 
 function Menu() {
   const navigate = useNavigate();
@@ -15,6 +15,10 @@ function Menu() {
   const handleTasksClick = () => {
     navigate('/tasks');
   };
+
+  const handleContactClick = () => {
+    navigate("/contact");
+  }
 
   return (
     <nav className={styles.navBar}>
@@ -38,6 +42,13 @@ function Menu() {
             onClick={handleTasksClick}
         >
             Tasks
+        </button>
+        <button 
+            type="button"
+            className={styles.menuButton}
+            onClick={handleContactClick}
+        >
+            Contact Us
         </button>
     </nav>
   );
