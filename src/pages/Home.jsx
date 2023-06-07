@@ -1,4 +1,4 @@
-import { Box, Heading, Text, Button, Stack } from '@chakra-ui/react';
+import { Box, Heading, Text } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
 import taskListIcon from '../assets/taskListIcon.png';
 import {FaTasks} from "react-icons/fa"
@@ -50,18 +50,15 @@ function Home() {
         position="fixed" 
         top="4rem" 
         left="1rem">
-        <Link 
+        {/* <Link 
         to="/tasks"
         >
           <button >
             <FaTasks 
             size="40"
-            color="rgb(0, 170, 255)"
-            hover={{ opacity: '0.8' }}
-            active={{ opacity: '0.6' }}
             /> 
         </button>
-        </Link>
+        </Link> */}
       </Box>
     </Box>
   );
