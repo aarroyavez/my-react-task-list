@@ -16,8 +16,8 @@ button {
   cursor: pointer;
 }
 
-@media(max-width: 100px){
+/* @media(max-width: 100px){
   .container{
     margin: 10px;
   }
-}
+} */

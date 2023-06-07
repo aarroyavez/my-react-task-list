@@ -8,6 +8,7 @@ import { ChakraProvider } from "@chakra-ui/react";
 
 function App() {
   return (  
+    <ChakraProvider>
     <BrowserRouter>
     <Menu />
       <Routes>
@@ -17,6 +18,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
       </Routes>
     </BrowserRouter>
+    </ChakraProvider>
   );
 }
 
