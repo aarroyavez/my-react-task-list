@@ -3,7 +3,7 @@ import AboutUs from "./pages/AboutUs";
 import Home from "./pages/Home";
 import Tasks from "./pages/Tasks";
 import Menu from "./Menu";
-import Contact from "./pages/ContactUs";
+
 import { ChakraProvider } from "@chakra-ui/react";
 import { Suspense } from "react";
 
@@ -22,7 +22,6 @@ function App() {
           </Suspense>
         }
         />
-        <Route path="/contact" element={<Contact />} />
       </Routes>
     </BrowserRouter>
     </ChakraProvider>

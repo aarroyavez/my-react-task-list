@@ -1,9 +1,7 @@
 import React, { useState } from "react";
-import styles from "./Header.module.css";
-import { BsPlusCircle } from "react-icons/bs";
+import styles from "./Header.module.css";;
 import taskListIcon from "../assets/taskListIcon.png";
-import { BsTrashFill } from "react-icons/bs";
-import {VscChecklist} from "react-icons/vsc"
+import { Button } from "@chakra-ui/react";
 
 function Header({ onAddTask, onDeleteAllTasks, onCompleteAll }) {
   const [title, setTitle] = useState("");
@@ -73,26 +71,27 @@ function Header({ onAddTask, onDeleteAllTasks, onCompleteAll }) {
         {formValidation.error && (
           <span className={styles.error}>{formValidation.errorMessage}</span>
         )}
-        <button type="submit" className={styles.addButton}>
+        <Button colorScheme='blue' type="submit" className={styles.addButton}>
           CREATE
-          <BsPlusCircle size={20} />
-        </button>
-        <button
+          
+        </Button>
+        <Button
+        colorScheme='red'
           className={styles.deleteAllTasks}
           type="button"
           onClick={handleDeleteAllTasks}
         >
           DELETE ALL
-          <BsTrashFill size={20} />
-        </button>
-        <button
+        </Button>
+        <Button
+        colorScheme='pink'
           className={styles.completeAllTasks}
           type="button"
           onClick={handleCompleteAllTasks}
         >
           COMPLETE ALL
-          <VscChecklist size={20} />
-        </button>
+          
+        </Button>
       </form>
     </header>
   );

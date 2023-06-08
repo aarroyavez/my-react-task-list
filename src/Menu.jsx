@@ -1,5 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import styles from "./styles/Menu.module.css"
+import { Button } from '@chakra-ui/react';
+import { motion } from "framer-motion";
 
 function Menu() {
   const navigate = useNavigate();
@@ -15,41 +17,51 @@ function Menu() {
   const handleTasksClick = () => {
     navigate('/tasks');
   };
-
-  const handleContactClick = () => {
-    navigate("/contact");
-  }
-
+  
   return (
     <nav className={styles.navBar}>
-        <button 
-            className={styles.menuButton}
-            type="button"
-            onClick={handleHomeClick}
-        >
+      <motion.div
+                    whileHover={{ scale: 1.1   }}
+                    whileTap={{ scale: 0.9 }}
+                    transition={{ duration: 0.2 }}
+                    >
+        <Button 
+          colorScheme='orange'
+          className={styles.menuButton}
+          type="button"
+          onClick={handleHomeClick}
+          >
             Home
-        </button>
-        <button 
-            type="button"
-            className={styles.menuButton}
-            onClick={handleAboutClick}
+        </Button>
+          </motion.div>
+          <motion.div
+                    whileHover={{ scale: 1.1   }}
+                    whileTap={{ scale: 0.9 }}
+                    transition={{ duration: 0.2 }}
+                    >
+        <Button 
+          colorScheme='teal'
+          type="button"
+          className={styles.menuButton}
+          onClick={handleAboutClick}
         >
             About Us
-        </button>
-        <button 
-            typeof="button"
-            className={styles.menuButton}
-            onClick={handleTasksClick}
+        </Button>
+        </motion.div>
+        <motion.div
+                    whileHover={{ scale: 1.1   }}
+                    whileTap={{ scale: 0.9 }}
+                    transition={{ duration: 0.2 }}
+                    >
+        <Button 
+          colorScheme='purple'
+          typeof="button"
+          className={styles.menuButton}
+          onClick={handleTasksClick}
         >
             Tasks
-        </button>
-        <button 
-            type="button"
-            className={styles.menuButton}
-            onClick={handleContactClick}
-        >
-            Contact Us
-        </button>
+        </Button>
+        </motion.div>
     </nav>
   );
 }

@@ -16,8 +16,9 @@ function AboutUs() {
   const whatsappMessage = "¡Hola! Estoy interesado en contactarte.";
     return (
       <>
-        <Flex display="flex" flexDirection="column" align="center" justifyContent="center" minHeight="100vh" p={[4, 6, 10]} color="white" fontFamily="Poppins" boxSizing="border-box" 
-        bgGradient="linear(to-b, #161B22, #0D1117)"
+        <Flex display="flex" flexDirection="column" align="center" justifyContent="center" minHeight="100vh" p={[4, 6, 10]} color="" fontFamily="Poppins" boxSizing="border-box" 
+        // bgGradient="linear(to-b, #161B22, #0D1117)"
+        // bg="#0D1117"
         >
           <Box mb={8}>
             <img src={about} alt="AboutUs" width={200} />
@@ -29,55 +30,57 @@ function AboutUs() {
             <Text fontSize={["2xl", "2xl", "3xl"]} mt={["1vh", "20vh", "0vh"]} textAlign="justify" padding="0 20px">
               My Task List es una aplicación que te ayuda a ordenar y manipular tus tareas o actividades diarias de una manera muy eficiente. Con ella, podrás crear, eliminar, actualizar y completar tus tareas. La App entrega una interfaz demasiado intuitiva y amigable; fácil de usar y sencilla para administrar tus responsabilidades diarias.
             </Text>
-            <Divider my={[4, 4, 4]} borderBottomWidth="2px" borderBottomColor="white" opacity="0.2" flexDirection="column" />
-            <Heading as="h2" fontSize={["3xl", "3xl", "5xl"]} color="white" mb={[8, 4, 50]} mt="2">Funcionalidades</Heading>
+            <Divider my={[4, 4, 4]} borderBottomWidth="2px" borderBottomColor="gray" opacity="0.6" flexDirection="column" />
+            {/* <Flex minWidth={"100"} bg="#0D1117" display="flex" flexDirection="column" align="center" justifyContent="center" p={[4, 6, 10]} color="white" fontFamily="Poppins" boxSizing="border-box">  */}
+            <Heading as="h2" fontSize={["3xl", "3xl", "5xl"]} color="" mb={[8, 4, 50]} mt="2">Funcionalidades</Heading>
             <Flex fontSize={["xl", "xl", "xl"]} p="0 20px">
-              <Text as="h2" fontSize={["2xl", "3xl", "3xl"]} textAlign="justify" color="white" mb={[8, 4, 8]} mt="-20px">
+              <Text as="h2" fontSize={["2xl", "3xl", "3xl"]} textAlign="justify" color="" mb={[8, 4, 8]} mt="-20px">
                 La aplicación cumple una serie de funcionalidades que te ayudarán a ordenar tus tareas de manera rápida
               </Text>
-            </Flex>
-              <Divider my={[4, 4, 4]} borderBottomWidth="2px" borderBottomColor="white" opacity="0.2" flexDirection="column"/>
+            {/* </Flex> */}
+              </Flex>
+              <Divider my={[4, 4, 4]} borderBottomWidth="2px" borderBottomColor="gray" opacity="0.6" flexDirection="column"/>
             <Flex fontSize={["xl", "xl", "xl"]}>
-              <Text as="h2" fontSize={["2xl", "3xl", "3xl"]} color="white" fontWeight="bold" textAlign="justify"mb={[8, 4, 8]}>
+              <Text as="h2" fontSize={["2xl", "3xl", "3xl"]} color="" fontWeight="bold" textAlign="justify"mb={[8, 4, 8]}>
                 Crear Tareas
               </Text>
             </Flex>
             <Flex fontSize={["xl", "xl", "xl"]} p="0 20px" flexDirection="column" align="center">
-              <Text as="h2" fontSize={["1xl", "2xl", "2xl"]} textAlign="justify" color="white" mb={[8, 4, 4]} mt="-20px">
+              <Text as="h2" fontSize={["1xl", "2xl", "2xl"]} textAlign="justify" color="" mb={[8, 4, 4]} mt="-20px">
                 Agregar una nueva tarea agregando un título y una descripción. Con el botón "CREATE" podrás crear tareas de manera individual
               </Text>
               <Box>
                 <Image src={createTasks} alt="create" borderRadius='20px' objectFit='cover'/>
               </Box>
             </Flex>
-              <Divider my={[4, 4, 4]} borderBottomWidth="2px" borderBottomColor="white" opacity="0.2" flexDirection="column" />
+              <Divider my={[4, 4, 4]} borderBottomWidth="2px" borderBottomColor="gray" opacity="0.6" flexDirection="column" />
             <Flex fontSize={["xl", "xl", "xl"]}>
-              <Text as="h2" fontSize={["2xl", "3xl", "3xl"]} color="white" fontWeight="bold" textAlign="justify" mb={[8, 4, 8]}>
+              <Text as="h2" fontSize={["2xl", "3xl", "3xl"]} color="" fontWeight="bold" textAlign="justify" mb={[8, 4, 8]}>
                 Editar Tareas
               </Text>
             </Flex>
             <Flex fontSize={["xl", "xl", "xl"]} p="0 20px" flexDirection="column" align="center">
-              <Text as="h2" fontSize={["1xl", "2xl", "2xl"]} textAlign="justify" color="white" mb={[8, 4, 4]} mt="-20px">
+              <Text as="h2" fontSize={["1xl", "2xl", "2xl"]} textAlign="justify" color="" mb={[8, 4, 4]} mt="-20px">
                 Si deseas, puedes actualizar una tarea, siempre y cuando, no la hayas completado. El botón edición solo estará habilitado cuando NO hayas completado la tarea
               </Text>
               <Box>
                 <Image src={editTasks} alt="create" borderRadius='20px' objectFit='cover'/>
               </Box>
-              <Text as="h2" fontSize={["1xl", "2xl", "2xl"]} textAlign="justify" color="white" mb={[8, 4, 4]} mt="4">
+              <Text as="h2" fontSize={["1xl", "2xl", "2xl"]} textAlign="justify" color="" mb={[8, 4, 4]} mt="4">
                 Podrás editar la tarea sin necesidad de modificar la descripción y guardarla cuando consideres que está actualizada. Observa cómo se actualizan los botones al momento de editar la tarea. Se muestra un botón de "Guardar" la tarea editada y un botón "X" de cancelar la edición
               </Text>
               <Box>
                 <Image src={editTasks2} alt="create" borderRadius='20px' objectFit='cover'/>
               </Box>
             </Flex>
-            <Divider my={[4, 4, 4]} borderBottomWidth="2px" borderBottomColor="white" opacity="0.2" flexDirection="column" />
+            <Divider my={[4, 4, 4]} borderBottomWidth="2px" borderBottomColor="gray" opacity="0.6" flexDirection="column" />
             <Flex fontSize={["xl", "xl", "xl"]}>
-              <Text as="h2" fontSize={["2xl", "3xl", "3xl"]} color="white" fontWeight="bold" textAlign="justify" mb={[8, 4, 8]}>
+              <Text as="h2" fontSize={["2xl", "3xl", "3xl"]} color="" fontWeight="bold" textAlign="justify" mb={[8, 4, 8]}>
                 Completar Tareas
               </Text>
             </Flex>
             <Flex fontSize={["xl", "xl", "xl"]} p="0 20px" flexDirection="column" align="center">
-              <Text as="h2" fontSize={["1xl", "2xl", "2xl"]} textAlign="justify" color="white" mb={[8, 4, 4]} mt="-20px">
+              <Text as="h2" fontSize={["1xl", "2xl", "2xl"]} textAlign="justify" color="" mb={[8, 4, 4]} mt="-20px">
                 Al momento que hayas culminado o cumplido una tarea, podrás marcarla como completada con el botón de completar. El botón es un círculo.
               </Text>
               <Box>
@@ -85,21 +88,21 @@ function AboutUs() {
               </Box>
             </Flex>
             <Flex fontSize={["xl", "xl", "xl"]}>
-              <Text as="h2" fontSize={["2xl", "3xl", "3xl"]} color="white" fontWeight="bold" textAlign="justify" mb={[8, 4, 8]} mt="4">
+              <Text as="h2" fontSize={["2xl", "3xl", "3xl"]} color="" fontWeight="bold" textAlign="justify" mb={[8, 4, 8]} mt="4">
                 Completar Todas las Tareas
               </Text>
             </Flex>
             <Flex fontSize={["xl", "xl", "xl"]} p="0 20px" flexDirection="column" align="center">
-              <Text as="h2" fontSize={["1xl", "2xl", "2xl"]} textAlign="justify" color="white" mb={[8, 4, 4]} mt="-20px">
+              <Text as="h2" fontSize={["1xl", "2xl", "2xl"]} textAlign="justify" color="" mb={[8, 4, 4]} mt="-20px">
                 Observar que cuando hayan muchas tareas por completar, puede volverse tedioso completar tarea por tarea. Para eso, tendrás el botón de "COMPLETE ALL" para la lista como completa.
               </Text>
               <Box>
                 <Image src={completeAllTasks} alt="create" borderRadius='20px' objectFit='cover'/>
               </Box>
             </Flex>
-            <Divider my={[4, 4, 4]} borderBottomWidth="2px" borderBottomColor="white" opacity="0.2" flexDirection="column"/>
+            <Divider my={[4, 4, 4]} borderBottomWidth="2px" borderBottomColor="gray" opacity="0.6" flexDirection="column"/>
             <Flex fontSize={["xl", "xl", "xl"]}>
-              <Text as="h2" fontSize={["2xl", "3xl", "3xl"]} color="white" fontWeight="bold" textAlign="justify" mb={[8, 4, 8]} >
+              <Text as="h2" fontSize={["2xl", "3xl", "3xl"]} color="" fontWeight="bold" textAlign="justify" mb={[8, 4, 8]} >
                 Borrar Tareas
               </Text>
             </Flex>
@@ -108,21 +111,17 @@ function AboutUs() {
               Puedes eliminar una tarea, independientemente de si la hayas completado o no. Observar cómo el botón de eliminar tarea está habilitado con la tarea completada y cuando no lo está.
               </Text>
               <Box>
-                <Image src={deleteTasks} alt="create" opacity="0.8" borderRadius='20px' objectFit='cover'/>
+                <Image src={deleteTasks} alt="create" borderRadius='20px' objectFit='cover'/>
               </Box>
-              <Box
-                mt="8"
-              >
-                <Image src={deleteTasks2} alt="create" borderRadius='20px' objectFit='cover'/>
-              </Box>
+              
             </Flex>
             <Flex fontSize={["xl", "xl", "xl"]}>
-              <Text as="h2" fontSize={["2xl", "3xl", "3xl"]} color="white" fontWeight="bold" textAlign="justify" mb={[8, 4, 8]} mt="4">
+              <Text as="h2" fontSize={["2xl", "3xl", "3xl"]} color="" fontWeight="bold" textAlign="justify" mb={[8, 4, 8]} mt="4">
                 Borrar Todas las Tareas
               </Text>
             </Flex>
             <Flex fontSize={["xl", "xl", "xl"]} p="0 20px" flexDirection="column" align="center">
-              <Text as="h2" fontSize={["1xl", "2xl", "2xl"]} textAlign="justify" color="white" mb={[8, 4, 4]} mt="-20px">
+              <Text as="h2" fontSize={["1xl", "2xl", "2xl"]} textAlign="justify" color="" mb={[8, 4, 4]} mt="-20px">
               Puedes elimiar todas las tareas que tengas en la lista de manera rápida
                 </Text>
               <Box>

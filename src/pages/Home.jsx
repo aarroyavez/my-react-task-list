@@ -15,10 +15,11 @@ function Home() {
         justifyContent="center"
         minHeight="100vh"
         p={[4, 6, 10]}
-        color="white"
+        // color="white"
         fontFamily="Poppins"
         boxSizing="border-box"
-        bgGradient="linear(to-b, #0D1117, #161B22)"
+        // bgGradient="linear(to-b, #0D1117, #161B22)"
+        // bg="black"
     >
       <Link to="/tasks">
         <motion.div
@@ -51,16 +52,18 @@ function Home() {
         </Text>
         <Divider maxWidth="1000px" 
         my={[2, 4, 4]} 
-        borderBottomWidth="2px" b
-        orderBottomColor="white" 
-        opacity="0.2" 
+        borderBottomWidth="2px" 
+        borderBottomColor="gray" 
+        opacity="0.6" 
         flexDirection="column" 
         />
 
         <Flex fontSize={["xl", "xl", "xl"]}
               maxWidth="800px"
             >
-              <Text as="h2" fontSize={["2xl", "3xl", "3xl"]} color="white" fontWeight="bold" textAlign="justify" mb={[8, 4, 8]}>
+              <Text as="h2" fontSize={["2xl", "3xl", "3xl"]} 
+              // color="white" 
+              fontWeight="bold" textAlign="justify" mb={[8, 4, 8]}>
                 ¡No dudes en contactarme!
               </Text>
             </Flex>
@@ -69,31 +72,65 @@ function Home() {
               <Wrap spacing={8} justify={["center", "center", "start"]} width="100%">
                 <WrapItem>
                   <Link to="mailto:aarroyavez@unal.edu.co">
-                    <Button colorScheme='teal' variant='solid'><HiOutlineMail />email</Button>
+                  <motion.div
+                    whileHover={{ scale: 1.2 }}
+                    whileTap={{ scale: 0.9 }}
+                    transition={{ duration: 0.2 }}
+                    >
+                    <Button colorScheme='red' variant='solid'>email</Button>
+                  </motion.div>
                   </Link>
                 </WrapItem>
                 <WrapItem>
                   <Link to="tel:++573113248955">
-                    <Button colorScheme='blue'><IoMdCall />Llámame</Button>
+                  <motion.div
+                    whileHover={{ scale: 1.2 }}
+                    whileTap={{ scale: 0.9 }}
+                    transition={{ duration: 0.2 }}
+                    >
+                    <Button colorScheme='blue'><IoMdCall /></Button>
+                  </motion.div>
                   </Link>
                 </WrapItem>
                 <WrapItem>
                   <Link to={`https://wa.me/3113248955?text=${encodeURIComponent(whatsappMessage)}`}>
+                    <motion.div
+                    whileHover={{ scale: 1.2 }}
+                    whileTap={{ scale: 0.9 }}
+                    transition={{ duration: 0.2 }}
+                    >
                     <Button colorScheme='whatsapp'>Whatsapp</Button>
+                    </motion.div>
+                  </Link>
+                </WrapItem>
+                <WrapItem>
+                  <Link to="https://www.linkedin.com/in/alexander-arroyave-zapata/">
+                    <motion.div
+                    whileHover={{ scale: 1.2 }}
+                    whileTap={{ scale: 0.9 }}
+                    transition={{ duration: 0.2 }}
+                    >
+                    <Button colorScheme='linkedin'>LinkedIn</Button>
+                    </motion.div>
                   </Link>
                 </WrapItem>
                 </Wrap>
                 </Box>
 
-        <Divider maxWidth="1000px" my={[4, 4, 4]} borderBottomWidth="2px" borderBottomColor="white" opacity="0.2" flexDirection="column" />
+        <Divider maxWidth="1000px" my={[4, 4, 4]} borderBottomWidth="2px" borderBottomColor="gray" opacity="0.6" flexDirection="column" />
           <Box mt={10} textAlign="center">
-            <Link to="/">
+            <Link to="/about">
+            <motion.div
+                    whileHover={{ scale: 1.2 }}
+                    whileTap={{ scale: 0.9 }}
+                    transition={{ duration: 0.2 }}
+                    >
               <ButtonGroup spacing={4}>
-                <Button colorScheme="whiteAlpha" size="lg" leftIcon={<RiReactjsFill />} variant="outline">
-                  Volver al Inicio
+                <Button colorScheme="teal" size="lg" leftIcon={<RiReactjsFill />} variant="outline">
+                  Acerca de Nosotros
               </Button>
-              
             </ButtonGroup>
+            </motion.div>
           </Link>
         </Box>
 
