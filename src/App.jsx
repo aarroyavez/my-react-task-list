@@ -5,6 +5,7 @@ import Tasks from "./pages/Tasks";
 import Menu from "./Menu";
 import Contact from "./pages/ContactUs";
 import { ChakraProvider } from "@chakra-ui/react";
+import { Suspense } from "react";
 
 function App() {
   return (  
@@ -14,7 +15,13 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/tasks" element={<Tasks />} />
-        <Route path="/about" element={<AboutUs />} />
+        <Route path="/about" 
+        element={
+          <Suspense fallback="... loading">
+            <AboutUs />
+          </Suspense>
+        }
+        />
         <Route path="/contact" element={<Contact />} />
       </Routes>
     </BrowserRouter>
