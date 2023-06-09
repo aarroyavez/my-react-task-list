@@ -176,7 +176,7 @@ function AboutUs() {
                 </WrapItem>
                 <WrapItem>
                   <Link to="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage"> 
-                    <Button colorScheme='whiteAlpha'>Local Storage</Button>
+                    <Button colorScheme='messenger'>Local Storage</Button>
                   </Link>
                 </WrapItem>
                 <WrapItem>
@@ -191,7 +191,7 @@ function AboutUs() {
           <Box mt={10} textAlign="center">
             <Link to="/">
               <ButtonGroup spacing={4}>
-                <Button colorScheme="whiteAlpha" size="lg" leftIcon={<RiReactjsFill />} variant="outline">
+                <Button colorScheme="green" size="lg" leftIcon={<RiReactjsFill />} variant="outline">
                   Volver al Inicio
               </Button>
               

@@ -21,7 +21,7 @@ function Tasks() {
   return (
     <>
     <Flex 
-        bgGradient="linear(to-b, #161B22, #0D1117)"
+        // bgGradient="linear(to-b, #161B22, #0D1117)"
         display="flex"
         flexDirection="column"
         justifyContent="center"

@@ -3,12 +3,12 @@ import AboutUs from "./pages/AboutUs";
 import Home from "./pages/Home";
 import Tasks from "./pages/Tasks";
 import Menu from "./Menu";
-
 import { ChakraProvider } from "@chakra-ui/react";
 import { Suspense } from "react";
 
 function App() {
   return (  
+    
     <ChakraProvider>
     <BrowserRouter>
     <Menu />
@@ -25,6 +25,7 @@ function App() {
       </Routes>
     </BrowserRouter>
     </ChakraProvider>
+        
   );
 }
 

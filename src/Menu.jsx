@@ -2,6 +2,7 @@ import { useNavigate } from 'react-router-dom';
 import styles from "./styles/Menu.module.css"
 import { Button } from '@chakra-ui/react';
 import { motion } from "framer-motion";
+import ToggleColorMode from './theme/ToggleColorMode';
 
 function Menu() {
   const navigate = useNavigate();
@@ -62,6 +63,8 @@ function Menu() {
             Tasks
         </Button>
         </motion.div>
+        <ToggleColorMode
+        />
     </nav>
   );
 }
