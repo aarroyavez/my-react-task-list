@@ -10,8 +10,7 @@ import deleteTasks2 from "../assets/deleteTasks2.jpeg";
 import deleteTasksAll from "../assets/deleteTasksAll.jpeg";
 import { Box, Flex, Heading, Text, Divider, Image, Stack, WrapItem, Wrap, ButtonGroup, Button } from "@chakra-ui/react";
 import {RiReactjsFill} from "react-icons/ri"
-import {HiOutlineMail} from "react-icons/hi";
-import {IoMdCall} from "react-icons/io";
+
 function AboutUs() {
   const whatsappMessage = "¡Hola! Estoy interesado en contactarte.";
     return (
@@ -32,8 +31,8 @@ function AboutUs() {
             </Text>
             <Divider my={[4, 4, 4]} borderBottomWidth="2px" borderBottomColor="gray" opacity="0.6" flexDirection="column" />
             {/* <Flex minWidth={"100"} bg="#0D1117" display="flex" flexDirection="column" align="center" justifyContent="center" p={[4, 6, 10]} color="white" fontFamily="Poppins" boxSizing="border-box">  */}
-            <Heading as="h2" fontSize={["3xl", "3xl", "5xl"]} color="" mb={[8, 4, 50]} mt="2">Funcionalidades</Heading>
-            <Flex fontSize={["xl", "xl", "xl"]} p="0 20px">
+            <Heading as="h2" fontSize={["3xl", "3xl", "5xl"]} color="" mb={[8, 4, 50]} mt="2" id="funcionalidades">Funcionalidades</Heading>
+            <Flex id="funcionalidades"fontSize={["xl", "xl", "xl"]} p="0 20px">
               <Text as="h2" fontSize={["2xl", "3xl", "3xl"]} textAlign="justify" color="" mb={[8, 4, 8]} mt="-20px">
                 La aplicación cumple una serie de funcionalidades que te ayudarán a ordenar tus tareas de manera rápida
               </Text>

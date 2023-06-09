@@ -1,9 +1,11 @@
 import { useNavigate } from 'react-router-dom';
 import styles from "./styles/Menu.module.css"
-import { Button } from '@chakra-ui/react';
+import { Button, WrapItem, Wrap, Flex, Box } from '@chakra-ui/react';
 import { motion } from "framer-motion";
+import { Link } from 'react-router-dom';
 import ToggleColorMode from './theme/ToggleColorMode';
-
+import {FaReact} from "react-icons/fa"
+import {VscTasklist} from "react-icons/vsc"
 function Menu() {
   const navigate = useNavigate();
 
@@ -20,6 +22,7 @@ function Menu() {
   };
   
   return (
+    <>
     <nav className={styles.navBar}>
       <motion.div
                     whileHover={{ scale: 1.1   }}
@@ -66,6 +69,23 @@ function Menu() {
         <ToggleColorMode
         />
     </nav>
+    <Wrap
+    // spacing={4}
+    direction='column'
+    position={"absolute"}
+    margin="0px 10px 0px"   
+    marginTop="20"
+    // left="vw"
+>  
+    <Link to="https://es.reactjs.org/">
+      <Button 
+      colorScheme='teal' variant="outline"><FaReact /></Button>
+    </Link>
+    <Link to="/tasks">
+      <Button colorScheme='green' variant="outline"><VscTasklist /></Button>
+    </Link>
+    </Wrap>
+    </>
   );
 }
 
