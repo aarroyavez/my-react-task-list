@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styles from "./Header.module.css";;
 import taskListIcon from "../assets/taskListIcon.png";
-import { Button } from "@chakra-ui/react";
+import { Button, ButtonGroup } from "@chakra-ui/react";
 
 function Header({ onAddTask, onDeleteAllTasks, onCompleteAll }) {
   const [title, setTitle] = useState("");
@@ -71,26 +71,38 @@ function Header({ onAddTask, onDeleteAllTasks, onCompleteAll }) {
         {formValidation.error && (
           <span className={styles.error}>{formValidation.errorMessage}</span>
         )}
-        <Button colorScheme='blue' type="submit" className={styles.addButton}>
+        <Button 
+        colorScheme='blue' 
+        type="submit" 
+        width={["40", "", "40"]}
+        fontSize={["12px", "xl", "16px"]}          
+        className={styles.addButton}>
           CREATE
           
         </Button>
         <Button
         colorScheme='red'
-          className={styles.deleteAllTasks}
-          type="button"
-          onClick={handleDeleteAllTasks}
+        className={styles.deleteAllTasks}
+        type="button"
+        onClick={handleDeleteAllTasks}
+        // fontWeight="10px"
+        width={["60", "", ""]}
+        fontSize={["12px", "xl", "16px"]}          
+
         >
           DELETE ALL
         </Button>
         <Button
+        
         colorScheme='pink'
           className={styles.completeAllTasks}
           type="button"
           onClick={handleCompleteAllTasks}
+          // padding="0px 16px"
+          width={["80", "0", "60"]}
+          fontSize={["12px", "xl", "16px"]}          
         >
           COMPLETE ALL
-          
         </Button>
       </form>
     </header>

@@ -107,7 +107,7 @@ function AboutUs() {
               </Text>
             </Flex>
             <Flex fontSize={["xl", "xl", "xl"]} p="0 20px" flexDirection="column" align="center">
-              <Text as="h2" fontSize={["1xl", "2xl", "2xl"]} textAlign="justify" color="white" mb={[8, 4, 4]} mt="-20px">
+              <Text as="h2" fontSize={["1xl", "2xl", "2xl"]} textAlign="justify" color="" mb={[8, 4, 4]} mt="-20px">
               Puedes eliminar una tarea, independientemente de si la hayas completado o no. Observar cómo el botón de eliminar tarea está habilitado con la tarea completada y cuando no lo está.
               </Text>
               <Box>
@@ -128,7 +128,7 @@ function AboutUs() {
                 <Image src={deleteTasksAll} alt="create" borderRadius='20px' objectFit='cover'/>
               </Box>
             </Flex>
-            <Divider my={[4, 4, 4]} borderBottomWidth="2px" borderBottomColor="white" opacity="0.2" flexDirection="column"/>
+            <Divider my={[4, 4, 4]} borderBottomWidth="2px" borderBottomColor="gray" opacity="0.6" flexDirection="column"/>
           </Flex>
         </Flex>
 
@@ -142,7 +142,7 @@ function AboutUs() {
               />
             </Heading>
             <Flex fontSize={["xl", "xl", "xl"]} p="0 20px" maxWidth="1000px">
-              <Text as="h2" fontSize={["2xl", "3xl", "3xl"]} textAlign="center" color="white" mb={[8, 4, 8]} mt="-20px">
+              <Text as="h2" fontSize={["2xl", "3xl", "3xl"]} textAlign="center" color="" mb={[8, 4, 8]} mt="-20px">
                   La Aplicación fue desarrollada con el framework de JavaScript, React y su herramienta Vite.js
               </Text>
             </Flex>
