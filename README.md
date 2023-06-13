@@ -44,4 +44,9 @@ En resumen, la aplicación my-react-task-list es una herramienta indispensable p
 - `node.js instalado`
 - instalar `chakra ui`
 
+## Instalación
+1. Clonar este repositorio:
+```
+git clone <https://github.com/aarroyavez/my-react-task-list>
+```
 
