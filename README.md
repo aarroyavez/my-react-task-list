@@ -7,9 +7,11 @@ My Task List es una aplicación que te ayuda a ordenar y manipular tus tareas o 
 ## Funcionalidades
 La aplicación cumple una serie de funcionalidades que te ayudarán a ordenar tus tareas de manera rápida
 - Crear Tareas
+...
 Agregar una nueva tarea agregando un título y una descripción. Con el botón "CREATE" podrás crear tareas de manera individual
 - Editar Tareas
-\\ Si deseas, puedes actualizar una tarea, siempre y cuando, no la hayas completado. El botón edición solo estará habilitado cuando NO hayas completado la tarea
+...
+Si deseas, puedes actualizar una tarea, siempre y cuando, no la hayas completado. El botón edición solo estará habilitado cuando NO hayas completado la tarea
 Podrás editar la tarea sin necesidad de modificar la descripción y guardarla cuando consideres que está actualizada. Observa cómo se actualizan los botones al momento de editar la tarea. Se muestra un botón de "Guardar" la tarea editada y un botón "X" de cancelar la edición
 - Completar Tareas
 Al momento que hayas culminado o cumplido una tarea, podrás marcarla como completada con el botón de completar. El botón es un círculo.
