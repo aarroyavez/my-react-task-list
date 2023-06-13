@@ -6,6 +6,7 @@ My Task List es una aplicación que te ayuda a ordenar y manipular tus tareas o 
 
 ## Funcionalidades
 La aplicación cumple una serie de funcionalidades que te ayudarán a ordenar tus tareas de manera rápida
+...
 - Crear Tareas
 ...
 Agregar una nueva tarea agregando un título y una descripción. Con el botón "CREATE" podrás crear tareas de manera individual
