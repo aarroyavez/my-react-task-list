@@ -6,22 +6,22 @@ My Task List es una aplicación que te ayuda a ordenar y manipular tus tareas o 
 
 ## Funcionalidades
 La aplicación cumple una serie de funcionalidades que te ayudarán a ordenar tus tareas de manera rápida
-- Crear Tareas
-- Editar Tareas
-- Completar Tareas
-- Completar Todas las Tareas
-- Borrar Tareas
-- Borrar Todas las Tareas
+-`Crear Tareas`
+- `Editar Tareas`
+- `Completar Tareas`
+- `Completar Todas las Tareas`
+- `Borrar Tareas`
+- `Borrar Todas las Tareas`
 
 ## Tecnologías
 La Aplicación fue desarrollada con el framework de JavaScript, React y su herramienta Vite.js
-- HTML y CSS
-- JavaScript 
-- Chakra ui
-- vite
-- react
-- react router
-- local storage
+- `HTML y CSS`
+- `JavaScript` 
+- `Chakra ui`
+- `vite`
+- `react`
+- `react router`
+- `local storage`
 
 
 
