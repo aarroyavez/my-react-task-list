@@ -23,5 +23,19 @@ La Aplicación fue desarrollada con el framework de JavaScript, React y su herra
 - `react router`
 - `local storage`
 
+### Responsive
+
+La aplicación se adapta perfectamente a cualquier dispositivo y tamaño de pantalla, lo que significa que puedes usarla cómodamente tanto en tu computadora de escritorio como en tu teléfono móvil.
+
+## Beneficios
+- Fácil de usar: La aplicación ha sido diseñada con una interfaz de usuario intuitiva y amigable, lo que la hace muy fácil de usar incluso para personas que no tienen experiencia previa con aplicaciones de lista de tareas.
+
+- Ahorra tiempo: Al usar la aplicación, podrás organizar tus tareas de una manera mucho más efectiva, lo que significa que podrás ahorrar tiempo al completar tus tareas más rápidamente y ser más productivo en general.
+
+- Mejora la organización: La aplicación te ayuda a mantener tus tareas organizadas y estructuradas, lo que significa que no tendrás que preocuparte por perder el seguimiento de las tareas importantes.
+
+- Accesibilidad: La aplicación es totalmente accesible desde cualquier dispositivo con conexión a internet, lo que significa que puedes acceder a tu lista de tareas en cualquier momento y lugar.
+
+En resumen, la aplicación my-react-task-list es una herramienta indispensable para cualquier persona que necesite organizar sus tareas diarias de manera eficiente y productiva. Con su interfaz de usuario intuitiva y fácil de usar, esta aplicación puede ayudarte a mejorar tu productividad y mantener tus tareas organizadas en todo momento.
 
 
