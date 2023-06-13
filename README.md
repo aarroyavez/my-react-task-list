@@ -40,6 +40,7 @@ En resumen, la aplicación my-react-task-list es una herramienta indispensable p
 
 ## Requisitos
 - `react instalado`
+- `vite instalado`
 - `react router instalado`
 - `node.js instalado`
 - instalar `chakra ui`
@@ -49,4 +50,17 @@ En resumen, la aplicación my-react-task-list es una herramienta indispensable p
 ```
 git clone <https://github.com/aarroyavez/my-react-task-list>
 ```
+2. Acceder al repositorio
+```
+cd my-react-task-list
+```
+3. Instalar dependencias:
+```
+npm install
+```
+4. Abrir aplicación con el siguiente comando:
+```
+npm run dev
+```
+
 
