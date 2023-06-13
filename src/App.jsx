@@ -3,17 +3,29 @@ import AboutUs from "./pages/AboutUs";
 import Home from "./pages/Home";
 import Tasks from "./pages/Tasks";
 import Menu from "./Menu";
+import { ChakraProvider } from "@chakra-ui/react";
+import { Suspense } from "react";
 
 function App() {
-  return (
+  return (  
+    
+    <ChakraProvider>
     <BrowserRouter>
     <Menu />
       <Routes>
-        <Route exact path="/" element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route path="/tasks" element={<Tasks />} />
-        <Route path="/about" element={<AboutUs />} />
+        <Route path="/about" 
+        element={
+          <Suspense fallback="... loading">
+            <AboutUs />
+          </Suspense>
+        }
+        />
       </Routes>
     </BrowserRouter>
+    </ChakraProvider>
+        
   );
 }
 

@@ -1,10 +1,11 @@
 .header {
-  background: #0D0D0D;
+  /* background: #0D0D0D; */
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 280px;
+  height: 300px;
   position: relative;
+  padding-top: 60px;
 }
 
 .newTaskForm {
@@ -21,38 +22,39 @@
 .inputTitle {
   height: 70%;
   width: 87%;
-  flex: 1;
-  color: white;
+  /* flex: 1; */
+  /* color: black; */
   border: 1.5px solid black;
   max-width: 736px;
   border-radius: 8px;
   padding: 0 16px;
   font-size: 14px;
-  background: #333333;
+  /* background: #333333; */
 }
 
 .inputDescription {
   position: absolute;
   border: 1px solid black;
-  color: white;
+  /* color: white; */
   border-radius: 8px;
   bottom: -25px;
-  width: 64.5%;
+  width: 70%;
   max-width: 736px;
   display: flex;
   gap: 8px;
   padding: 1rem;
   height: 20%;
   font-size: 14px;
-  background: #333333;
+  /* background: #333333; */
   /* width: 44.5%; */
+  
 }
 
-.newTaskForm input::placeholder {
+/* .newTaskForm input::placeholder {
   color: white;
-}
+} */
 
-.addButton {
+/* .addButton {
   height: 70%;
   padding: 0 10px;
   background: rgb(0, 170, 255);
@@ -63,24 +65,25 @@
   align-items: center;
   gap: 6px;
   font-weight: 700;
-  font-size: 14px;
-}
+  font-size: 10px;
+} */
 
 .error {
   position: absolute;
-  bottom: -50px;
-  color: yellow;
-  font-size: 14px;
+  bottom: -60px;
+  /* color: yellow; */
+  font-size: 12px;
   background: none;
   text-transform: uppercase;
   text-decoration: solid;
 }
 
 .inputError {
-  border: 3px solid rgb(0, 170, 255) !important;
+  /* border: 3px solid yellow !important; */
+  /* color: white; */
 }
 
-.deleteAllTasks {
+/* .deleteAllTasks {
   height: 70%;
   padding: 0 10px;
   background: red;
@@ -92,7 +95,7 @@
   gap: 6px;
   font-weight: 700;
   font-size: 14px;
-}
+} */
 
 .todoApp {
   display: flex;
@@ -101,11 +104,12 @@
   background: linear-gradient(to right, rgb(0, 170, 255), #ff00ff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  bottom: 220px;
+  bottom: 180px;
   gap: 10px;
+  font-size: 40px;
 }
 
-.completeAllTasks{
+/* .completeAllTasks{
   height: 70%;
   padding: 0 10px;
   background: #ff00ff;
@@ -117,4 +121,5 @@
   gap: 6px;
   font-weight: 700;
   font-size: 14px;
-}
+} */
+
