@@ -38,4 +38,10 @@ La aplicación se adapta perfectamente a cualquier dispositivo y tamaño de pant
 
 En resumen, la aplicación my-react-task-list es una herramienta indispensable para cualquier persona que necesite organizar sus tareas diarias de manera eficiente y productiva. Con su interfaz de usuario intuitiva y fácil de usar, esta aplicación puede ayudarte a mejorar tu productividad y mantener tus tareas organizadas en todo momento.
 
+## Requisitos
+- `react instalado`
+- `react router instalado`
+- `node.js instalado`
+- instalar `chakra ui`
+
 
