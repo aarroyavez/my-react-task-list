@@ -1,49 +1,125 @@
 .header {
-    background: rgb(1, 1, 22);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 280px;
-    position: relative;
+  /* background: #0D0D0D; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  position: relative;
+  padding-top: 60px;
 }
 
-.FormNuevaTarea {
-    position: absolute;
-    height: 54px;
-    bottom: -27px;
-    width: 100%;
-    max-width: 736px;
-    display: flex;
-    gap: 8px;
-    padding: 0 1rem;
-  }
+.newTaskForm {
+  position: absolute;
+  height: 54px;
+  bottom: -27px;
+  width: 100%;
+  max-width: 736px;
+  display: flex;
+  gap: 8px;
+  padding: 0 1rem;
+}
+
+.inputTitle {
+  height: 70%;
+  width: 87%;
+  /* flex: 1; */
+  /* color: black; */
+  border: 1.5px solid black;
+  max-width: 736px;
+  border-radius: 8px;
+  padding: 0 16px;
+  font-size: 14px;
+  /* background: #333333; */
+}
+
+.inputDescription {
+  position: absolute;
+  border: 1px solid black;
+  /* color: white; */
+  border-radius: 8px;
+  bottom: -25px;
+  width: 70%;
+  max-width: 736px;
+  display: flex;
+  gap: 8px;
+  padding: 1rem;
+  height: 20%;
+  font-size: 14px;
+  /* background: #333333; */
+  /* width: 44.5%; */
   
-  .FormNuevaTarea input {
-    height: 100%;
-    flex: 1;
-    color: #fff;
-    background: white;
-    border: 3px solid orangered;
-    border-radius: 8px;
-    padding: 0 16px;
-    font-size: 16px;
-  }
-  
-.FormNuevaTarea input::placeholder {
-    color: black;
-  }
-  
-.FormNuevaTarea button {
-    height: 100%;
-    padding: 0 16px;
-    background: orangered;
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    font-weight: 700;
-    font-size: 14px;
-  }
+}
+
+/* .newTaskForm input::placeholder {
+  color: white;
+} */
+
+/* .addButton {
+  height: 70%;
+  padding: 0 10px;
+  background: rgb(0, 170, 255);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 700;
+  font-size: 10px;
+} */
+
+.error {
+  position: absolute;
+  bottom: -60px;
+  /* color: yellow; */
+  font-size: 12px;
+  background: none;
+  text-transform: uppercase;
+  text-decoration: solid;
+}
+
+.inputError {
+  /* border: 3px solid yellow !important; */
+  /* color: white; */
+}
+
+/* .deleteAllTasks {
+  height: 70%;
+  padding: 0 10px;
+  background: red;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 700;
+  font-size: 14px;
+} */
+
+.todoApp {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  background: linear-gradient(to right, rgb(0, 170, 255), #ff00ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  bottom: 180px;
+  gap: 10px;
+  font-size: 40px;
+}
+
+/* .completeAllTasks{
+  height: 70%;
+  padding: 0 10px;
+  background: #ff00ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 700;
+  font-size: 14px;
+} */
 

@@ -8,10 +8,16 @@
 
 body {
   background: #191919;
-  color: #F2F2F2;
+  color: white;
   min-height: 100vh;
 }
 
 button {
   cursor: pointer;
 }
+
+/* @media(max-width: 100px){
+  .container{
+    margin: 10px;
+  }
+} */

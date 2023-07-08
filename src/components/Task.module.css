@@ -1,49 +1,97 @@
 .task {
-    width: 100%;
-    background: #262626;
-    border: 1px solid #333333;
-    padding: 16px;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-  }
+  width: 100%;
+  /* background: #262626; */
+  border: 1px solid #333333;
+  padding: 16px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  /* color: white; */
+}
+
+.task p {
+  font-size: 16px;
+  line-height: 19px;
+  /* color: white; */
+  margin-right: auto;
+  text-align: center;
+}
+
+p.taskDescription {
+  font-size: 12px;
+  /* color: white; */
+  text-align: center;
+}
+
+p.textCompleted {
+  color: #ff00ff;
+  text-decoration: line-through;
+}
+
+.checkContainer {
+  width: 18px;
+  height: 18px;
+  background: none;
+  border: none;
+}
+
+.checkContainer div {
+  width: 100%;
+  height: 100%;
+  border-radius: 1000px;
+  border: 2px solid #ff00ff;
+}
+
+.checkContainer svg {
+  width: 100%;
+  height: 100%;
+  color: #ff00ff;
+}
+
+.deleteButton {
+  background: none;
+  border: none;
+  color: rgb(0, 170, 255);
   
-  .task p {
-    font-size: 14px;
-    line-height: 19px;
-    color: #F2F2F2;
-    margin-right: auto;
-  }
+}
   
-  p.textCompleted {
-    color: #808080;
-    text-decoration: line-through;
-  }
-  
-  .checkContainer {
-    width: 18px;
-    height: 18px;
-    background: none;
-    border: none;
-  }
-  
-  .checkContainer div {
-    width: 100%;
-    height: 100%;
-    border-radius: 1000px;
-    border: 2px solid orangered;
-  }
-  
-  .checkContainer svg {
-    width: 100%;
-    height: 100%;
-    color: #5E60CE;
-  }
-  
-  .deleteButton {
-    background: none;
-    border: none;
-    color: #808080;
-  }
+.editButton{
+  background: none;
+  border: none;
+  color: rgb(0, 170, 255);
+  margin-left: 15px;
+}
+
+.cancelButton{
+  background: none;
+  border: none;
+  color: #ff00ff;
+}
+
+.saveButton{
+  background: none;
+  border: none;
+  color: #ff00ff;
+  margin-left: 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.editInput {
+  height: 25px;
+  font-size: 16px;
+  border: 2px solid  !important;
+  border-radius: 4px;
+  justify-content: center;
+  text-align: center;
+  background: #8d5f8d;
+  color: white;
+  width: 400px;
+}
+
+.disabledButton {
+  color: #808080;
+}
+
