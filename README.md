@@ -67,8 +67,3 @@ npm run dev
 
 Si encuentras algún error, tienes alguna sugerencia o deseas contribuir de alguna forma, siéntete libre de abrir un problema o enviar una solicitud de extracción.
 
-## Licencia
-
-Este proyecto está bajo la Licencia MIT. Puedes obtener más información en el archivo [LICENSE](LICENSE).
-
-
