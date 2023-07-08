@@ -62,3 +62,8 @@ npm install
 ```
 npm run dev
 ```
+
+## Contribución
+
+Si encuentras algún error, tienes alguna sugerencia o deseas contribuir de alguna forma, siéntete libre de abrir un problema o enviar una solicitud de extracción.
+
